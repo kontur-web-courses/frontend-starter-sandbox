@@ -1,19 +1,14 @@
 import React from 'react';
-import {format} from "../emoji.js";
-// import styles from "./Message.css";
+import Message from './Message.jsx';
 
 export default class MessageList extends React.Component {
     render() {
-        var messageNodes = this.props.messages.map((m, i) => (
-            <div className="message" key={i}>
-                {m.user}: {format(m.text)}
-            </div>)
-        );
+        const messageNodes = this.props.messages.map((m, i) => <Message {...m} key={i} />);
         return (
             <div>
                 <div>Last messages:</div>
                 {messageNodes}
             </div>
-        )
+        );
     }
 }
