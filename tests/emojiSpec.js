@@ -1,4 +1,4 @@
-var should = require('should');
+require('should');
 var emoji = require('../src/emoji');
 
 describe("emoji", function() {
