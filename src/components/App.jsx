@@ -1,5 +1,7 @@
 import React from 'react';
 import MessageList from './MessageList.jsx';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AppBar from "material-ui/AppBar";
 
 export default class App extends React.Component {
     constructor() {
@@ -14,9 +16,12 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <div style={{margin: "0 auto", maxWidth: "600px"}}>
-				<MessageList messages={this.state.messages} />
-            </div>
+            <MuiThemeProvider>
+                <div style={{margin: "0 auto", maxWidth: "600px"}}>
+                    <AppBar title="Chat App" />
+                    <MessageList messages={this.state.messages} />
+                </div>
+            </MuiThemeProvider>
         );
     }
 }
