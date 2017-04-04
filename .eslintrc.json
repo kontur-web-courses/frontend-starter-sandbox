@@ -1,0 +1,25 @@
+{
+  // Делаем доступными правила из плагинов
+  "plugins": ["import"],
+  // Включаем все рекомендуемые правила, а также правила из плагина
+  "extends": ["eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "rules": {
+    "no-console": "off", // Одно из рекомендуемых правил отключаем
+    "strict": ["error", "global"] // Включаем дополнительное правило
+  },
+  // Разрешаем глобальные переменные для разных окружений
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    // Устанавливаем версию ECMAScript. По умолчанию - ECMAScript 5.
+    "ecmaVersion": 2015, // Допустимо 3, 5, 6, 2015, 7, 2016, 8, 2017
+    "sourceType": "module" // Разрешаем модули ES2015
+  }
+}

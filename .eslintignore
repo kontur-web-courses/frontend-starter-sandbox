@@ -1,0 +1,4 @@
+# /node_modules/* и /bower_components/* игнорируются по умолчанию
+
+# Игнорируем файлы конфигурации
+webpack.config.js
