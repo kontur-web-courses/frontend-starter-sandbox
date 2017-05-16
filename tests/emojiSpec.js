@@ -1,14 +1,14 @@
-var should = require('should');
+var expect = require('chai').expect;
 var emoji = require('../src/emoji');
 
 describe("emoji", function() {
     it('should not change text without smileys', function(){
-        emoji.format("Hello world").should.equal("Hello world");
+        expect(emoji.format("Hello world")).to.equal("Hello world");
     });
     it('should replace smiley with unicode symbol', function(){
-        emoji.format("Hi! :)").should.equal("Hi! ☺");
+        expect(emoji.format("Hi! :)")).to.equal("Hi! ☺");
     });
     it('should replace several smiles', function(){
-        emoji.format("Hi! :) :)").should.equal("Hi! ☺ ☺");
+        expect(emoji.format("Hi! :) :)")).to.equal("Hi! ☺ ☺");
     });
 });
