@@ -1,5 +1,5 @@
 var format = function(message){
-    return message.replace(/:\)/g, "☺");
+    return message.replace(/:\)/, "☺");
 };
 
 module.exports = {
