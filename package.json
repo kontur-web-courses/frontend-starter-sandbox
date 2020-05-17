@@ -1,0 +1,18 @@
+{
+  "name": "frontend-starter-sandbox",
+  "version": "1.0.0",
+  "description": "Это песочница для Frontend Starter Tutorial",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/* && exit 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.0"
+  }
+}
